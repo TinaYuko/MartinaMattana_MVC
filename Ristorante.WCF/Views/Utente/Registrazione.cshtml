@@ -1,0 +1,21 @@
+﻿@model UtenteViewModel
+
+<form method="post">
+   
+    <div class="form-group">
+        <label asp-for="Username"></label>
+        <input asp-for="Username" class="form-control" />
+        <span asp-validation-for="Username" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Password"></label>
+        <input asp-for="Password" class="form-control" />
+        <span asp-validation-for="Password" class="text-danger"></span>
+  
+    <input type="submit" value="Salva" class="btn btn-outline-success" />
+    <input type="reset" value="Reset" class="btn btn-outline-warning" />
+    <a class="btn btn-outline-warning" asp-controller="Utente" asp-action="Login" role="button">Indietro</a>
+</form>
+
+    <img src="https://media-cdn.tripadvisor.com/media/photo-s/0e/76/88/e2/logo-ristorante.jpg" />
+

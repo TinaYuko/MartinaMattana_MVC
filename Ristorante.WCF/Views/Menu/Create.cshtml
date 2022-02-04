@@ -1,0 +1,19 @@
+﻿@model MenuViewModel
+<h1>Inserisci nuovo menu: </h1>
+
+<form method="post">
+    <div class="form-group">
+        <input type="hidden" asp-for="Id" class="form-control" value="0" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Nome"></label>
+        <input asp-for="Nome" class="form-control" />
+        <span asp-validation-for="Nome" class="text-danger"></span>
+    </div>
+    
+ <input type="submit" value="Salva" class="btn btn-outline-success" />
+    <input type="reset" value="Reset" class="btn btn-outline-warning" />
+    <a class="btn btn-outline-warning" asp-controller="Prodotti" asp-action="Index" role="button">Indietro</a>
+</form>
+
+    <img src="https://media-cdn.tripadvisor.com/media/photo-s/0e/76/88/e2/logo-ristorante.jpg" />

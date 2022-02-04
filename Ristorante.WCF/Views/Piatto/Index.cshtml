@@ -1,0 +1,37 @@
+﻿@model List<PiattoViewModel>
+<h1>Lista dei piatti</h1>
+
+@if (User.IsInRole("Administrator"))
+{
+    <a asp-controller="Piatto" asp-action="Create" class="btn btn-outline-warning">Aggiungi Piatto</a>
+}
+<table class="table table-hover table-bordered table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome piatto</th>
+            <th>Azioni</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Nome</td>
+                <td>
+                    <a asp-controller="Piatto" asp-action="Details" asp-route-id="@item.Id" class="btn btn-outline-warning">Visualizza</a>
+                    @if (User.IsInRole("Administrator"))
+                    {
+                        <a asp-controller="Piatto" asp-action="Update" asp-route-id="@item.Id" class="btn btn-outline-warning">Modifica</a>
+                        <a asp-controller="Piatto" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-outline-danger">Delete</a>
+                    }
+                </td>
+
+            </tr>
+        }
+    </tbody>
+
+</table>
+    <img src="https://media-cdn.tripadvisor.com/media/photo-s/0e/76/88/e2/logo-ristorante.jpg" />
+

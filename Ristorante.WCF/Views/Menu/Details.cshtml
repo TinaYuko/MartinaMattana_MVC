@@ -1,0 +1,32 @@
+﻿@model MenuViewModel
+<h1>MENU</h1>
+
+<table class="table table-hover table-bordered table table-striped">
+    <tbody>
+        <tr>
+            <th>ID</th>
+            <td>@Model.Id</td>
+        </tr>
+        <tr>
+            <th>Nome</th>
+            <td>@Model.Nome</td>
+        </tr>
+        <tr>
+            <th>Piatti</th>
+            @foreach (var item in Model.Piatti)
+            {
+
+                        <th>@item.Nome</th>
+                        <td>Prezzo: @item.Prezzo Euro</td>
+            }
+        </tr>
+        <tr>
+            <th>Totale Menù</th>
+            <td>@ViewBag.Total Euro</td>
+        </tr>
+
+
+    </tbody>
+</table>
+
+    <img src="https://media-cdn.tripadvisor.com/media/photo-s/0e/76/88/e2/logo-ristorante.jpg" />

@@ -1,0 +1,37 @@
+﻿@model PiattoViewModel
+<form method="post">
+    <p>Sei sicuro di voler eliminare questo prodotto: @Model.Id - @Model.Nome?</p>
+
+    <div class="form-group">
+        <label asp-for="Id"></label>
+        <input asp-for="Id" class="form-control" readonly />
+        <span asp-validation-for="Id" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Nome"></label>
+        <input asp-for="Nome" class="form-control" readonly />
+        <span asp-validation-for="Nome" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Descrizione"></label>
+        <input asp-for="Descrizione" class="form-control" readonly />
+        <span asp-validation-for="Descrizione" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Tipologia"></label>
+        <input asp-for="Tipologia" class="form-control" readonly />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Prezzo"></label>
+        <input asp-for="Prezzo" class="form-control" readonly />
+        <span asp-validation-for="Prezzo" class="text-danger"></span>
+    </div>
+
+
+    <input type="submit" value="Conferma" class="btn btn-outline-success" />
+    <a class="btn btn-outline-danger" asp-controller="Piatto" asp-action="Index" role="button">Annulla</a>
+</form>
+
+    <img src="https://media-cdn.tripadvisor.com/media/photo-s/0e/76/88/e2/logo-ristorante.jpg" />

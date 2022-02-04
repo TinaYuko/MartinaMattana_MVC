@@ -1,0 +1,19 @@
+﻿@model UtenteViewModel
+
+<form method=post>
+  <input type="hidden" asp-for="ReturnUrl" />
+
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Username</label>
+    <input asp-for="Username" class="form-control" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input asp-for="Password" type="password" class="form-control" id="exampleInputPassword1">
+  </div>
+  <div class="btn-group" role="group">
+
+    <input type="submit" value="Login" class="btn btn-outline-success" />
+    <input type="submit" value="Registrazione" class="btn btn-outline-success" />
+  </div>
+</form>
